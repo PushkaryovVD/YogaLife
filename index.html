@@ -138,24 +138,19 @@
     font-size: 40px;
     color: #304b75;
 ">Тренерский состав и Услуги</h3>
-        <div class="container card__container">
-            <div class="card in_line">
-                <div class="imgbx">
-                    <img src="./assets/trainer.jpg" alt="arina">
-                    <img src="./assets/all1.jpg" alt="onwork">
-                </div>
-                <div class="details">
-                    <div class="content" style="font-size: 1em;">
-                        <h2>Шалаева Арина Олеговна <br><span>сертифицированный инструктор Хатха-Йоги
-                          Опыт работы 4 года</span></h2>
-                        <div class="social__icons">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-vk"></i></a>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                        </div>
-                    </div>
-                </div>
+        <div class="trainer-card">
+          <img class="trainer-image" src="./assets/trainer.jpg" alt="arina">
+          <div class="trainer-details">
+            <h2>
+              Шалаева Арина Олеговна
+              <span>Сертифицированный инструктор Хатха-Йоги<br>Опыт работы 4 года</span>
+            </h2>
+            <div class="social__icons">
+              <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+              <a href="https://vk.com/yoga_life_ri"><i class="fab fa-vk"></i></a>
+              <!-- <a href="#"><i class="fab fa-facebook"></i></a> -->
             </div>
+          </div>
         </div>
         <div class="container">
           <div class="card_new">
@@ -329,13 +324,13 @@
   
           <!-- <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.4823123843547!2d30.38167327698404!3d59.87943116191711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962e3c4b9a3e6f%3A0x5a06f013f1d21a4b!2z0KHQtdGA0L3QvtCz0L4sIDE1LCDQnNC-0YHQutCy0LAsINCh0LDQvNC40L3QsCwgMTkyMjEy!5e0!3m2!1sen!2sru!4v1710000000000!5m2!1sen!2sru" allowfullscreen="" loading="lazy"></iframe> -->
           <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2002.1919917086404!2d30.377671843902586!3d59.87916188121151!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fe1193530b7%3A0x5e57671fa099bd91!2sSpbgup!5e0!3m2!1sen!2sru!4v1741523692905!5m2!1sen!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <form action="">
-              <h3>Обратная связь</h3>
-              <input type="text" placeholder="Ваше имя" class="box">
-              <input type="email" placeholder="Ваша почта" class="box">
-              <input type="tel" placeholder="Заголовок" class="box">
-              <textarea placeholder="Сообщение" class="box" cols="30" rows="10"></textarea>
-              <input type="submit" value="Отправить" class="btn_yg">
+          <form id="contact-form">
+            <h3>Обратная связь</h3>
+            <input type="text" name="user_name" placeholder="Ваше имя" class="box">
+            <input type="email" name="user_email" placeholder="Ваша почта" class="box">
+            <!-- <input type="text" name="subject" placeholder="Заголовок" class="box"> -->
+            <textarea name="message" placeholder="Сообщение" class="box" cols="30" rows="10"></textarea>
+            <input type="submit" value="Отправить" class="btn_yg">
           </form>
   
       </div>
@@ -379,9 +374,17 @@
         </div>
       </div>
       <div class="section__container footer__bar footer__text">«YogaLife: Познай себя заново»</div>
-
+      <div class="section__container footer__bar">
+        Сделано с любовью от Котика © 2025. Ни один котик не пострадал при создании.
+      </div>
     </footer>
 
     <script src="main.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function(){
+        emailjs.init("k9U7eqUQy4Uy3av8I"); // заменишь на свой public key
+      })();
+    </script>
   </body>
 </html>

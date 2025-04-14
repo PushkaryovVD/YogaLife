@@ -83,3 +83,15 @@ ScrollReveal().reveal(".photos__card", {
   duration: 1000,
   interval: 500,
 });
+
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('arinayoga', 'template_lm5cu3f', this)
+    .then(() => {
+      alert("Сообщение успешно отправлено!");
+      this.reset();
+    }, (error) => {
+      alert("Ошибка отправки: " + JSON.stringify(error));
+    });
+});

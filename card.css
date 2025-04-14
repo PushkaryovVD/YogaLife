@@ -1,12 +1,14 @@
-.card__container{
+/* .card__container {
     display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.card{
+
+.card {
     position: relative;
-    width: 300px;height: 400px;
+    width: 300px;
+    height: 400px;
     background: #fff;
     transform-style: preserve-3d;
     transform: perspective(1000px);
@@ -14,87 +16,81 @@ justify-content: center;
     transition: 1s;
     margin-right: 10px;
 }
+
 .card-img-top {
     width: 50%;
     height: 50;
-
 }
 
 .card {
-
     display: flex;
     align-items: center;
     margin: 0 10px;
 }
-.card:hover{
-    transform: translateX(50%);
-}
-.card:hover:nth-child(1){
-    margin-right: 160px;
-    margin-left: 100px;
-}
-.card:hover:nth-child(2){
-    margin-right: 160px;
-    margin-left: 160px;
-}
-.card:hover:nth-child(3){
-    margin-left: 160px;
-    margin-right: 100px;
-}
-.card .imgbx{
+
+.card .imgbx {
     position: relative;
-    width: 100%;height: 100%;
+    width: 100%;
+    height: 100%;
     z-index: 1;
-    transform-origin: left;
+     transform-origin: left; 
     transform-style: preserve-3d;
     background: #000;
-    transition: 1s;
+    transition: transform 1s ease-in-out;
     box-shadow: 10px 20px 40px rgba(0, 0, 0, .25);
 }
-.card:hover .imgbx{
-    transform: rotateY(-180deg);
+
+.card .imgbx img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
 }
-.card .imgbx img{
-    position: absolute;
-    top: 0;left: 0;
-    width: 100%;height: 100%;
-    object-fit: cover;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-.card .imgbx img:nth-child(2){
+
+.card .imgbx img:nth-child(2) {
     transform: rotateY(180deg);
 }
-.card .details{
-    position: absolute;
-    top: 0;left: 0;width: 100%;height: 100%;
+
+.card .details {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card .details .content{
+
+.card .details .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.card .details .content h2{
+
+.card .details .content h2 {
     text-align: center;
-    font-weight: 700;line-height: 1em;
+    font-weight: 700;
+    line-height: 1em;
 }
-.card .details .content h2 span{
+
+.card .details .content h2 span {
     color: #e21212;
     font-size: 0.6em;
 }
-.card .details .content .social__icons{
+
+.card .details .content .social__icons {
     position: relative;
     display: flex;
     margin-right: 10px;
 }
-.card .details .content .social__icons a{
+
+.card .details .content .social__icons a {
     display: inline-block;
-    width: 35px;height: 35px;
+    width: 35px;
+    height: 35px;
     background: #333;
     color: #fff;
     display: flex;
@@ -104,7 +100,62 @@ justify-content: center;
     margin: 5px;
     font-size: 18px;
     transition: .2s;
-}
-.card .details .content .social__icons a:hover{
-    background: #e21212;
-}
+} */
+
+.trainer-card {
+    
+    max-width: 400px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .trainer-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .trainer-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .trainer-details {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .trainer-details h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+  }
+
+  .trainer-details h2 span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.95em;
+    color: #777;
+    font-weight: normal;
+  }
+
+  .social__icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social__icons a {
+    color: #555;
+    font-size: 1.4em;
+    transition: color 0.3s ease;
+  }
+
+  .social__icons a:hover {
+    color: #000;
+  }
